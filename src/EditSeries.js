@@ -8,19 +8,28 @@ const statuses = {
     'toWatch': 'Assistir'
 }
 
-class NewSeries extends Component{
+class EditSeries extends Component{
     constructor(props){
         super(props)
     
         this.state = {
           genres: [],
           isLoading: false,
-          redirect: false
+          redirect: false,
+          series:{}
         }
         this.saveSeries = this.saveSeries.bind(this)
       }
       componentDidMount(){
         this.setState({ isLoading: true})
+        api.loadSeriesById(this.props.match.params.id)
+        .then((res)=>{
+          this.setState({ series: res.data })
+          this.refs.name.value = this.state.series.name
+          this.refs.genre.value = this.state.series.genre
+          this.refs.status.value = this.state.series.status
+          this.refs.comments.value = this.state.series.comments
+        })
         api.loadGenres()
         .then((res)=>{
           this.setState({
@@ -31,12 +40,14 @@ class NewSeries extends Component{
       }
       saveSeries(){
        const newSeries= {
+         id: this.props.match.params.id,
           name: this.refs.name.value,
           status: this.refs.status.value,
           genre: this.refs.genre.value,
           comments: this.refs.comments.value    
        }
-       api.saveSeries(newSeries).then((res)=>{
+       api.updateSeries(newSeries)
+       .then((res)=>{
          this.setState({
           redirect:'/series/'+this.refs.genre.value
          })
@@ -48,7 +59,7 @@ class NewSeries extends Component{
          { this.state.redirect &&
           <Redirect to={this.state.redirect} />
           }
-          <h1>Nova Série</h1>
+          <h1>Editar Série</h1>
           <form>
            Nome: <input type="text" ref='name' className="form-control" /><br />
            Status:
@@ -59,7 +70,7 @@ class NewSeries extends Component{
             }
            </select><br />
            Genêro:
-           <select ref='genre'>
+           <select  ref='genre'>
             { this.state.genres
                 .map( key => <option key={key} value={key}>{key}</option>)
             }
@@ -72,4 +83,4 @@ class NewSeries extends Component{
  }
 }
 
-export default NewSeries
+export default EditSeries
