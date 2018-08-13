@@ -31,6 +31,13 @@
       "status": "toWatch",
       "genre": "Drama",
       "comments": "Galera fala bem"
+    },
+    {
+      "name": "novo teste",
+      "status": "watching",
+      "genre": "Drama",
+      "comment": "bom",
+      "id": 5
     }
   ],
   "genres": [
