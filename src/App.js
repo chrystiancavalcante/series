@@ -8,6 +8,7 @@ import {
 import Home from './Home'
 import NewSeries from './NewSeries'
 
+//functional-stateless component
 const About = () => <section className="intro-section"><h1> Sobre </h1></section>
 
 class App extends Component {

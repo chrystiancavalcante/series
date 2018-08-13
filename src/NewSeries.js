@@ -28,10 +28,14 @@ class NewSeries extends Component{
         })
       }
       saveSeries(){
-       
-        alert(this.refs.name) 
-        
-        return false
+       const newSeries= {
+          name: this.refs.name.value,
+          status: this.refs.status.value,
+          genre: this.refs.genre.value,
+          comment: this.refs.comment.value    
+       }
+       api.saveSeries(newSeries)
+       .then((res)=>console.log(res))
       }
  render(){
      return (
@@ -40,19 +44,19 @@ class NewSeries extends Component{
           <form>
            Nome: <input type="text" ref='name' className="form-control" /><br />
            Status:
-           <select>
+           <select ref='status'>
             { Object
                 .keys(statuses)
                 .map( key => <option key={key} value={key}>{statuses[key]}</option>)
             }
            </select><br />
            Genêro:
-           <select>
+           <select ref='genre'>
             { this.state.genres
                 .map( key => <option key={key} value={key}>{key}</option>)
             }
            </select><br />
-           Comentários: <textarea className="form-control"></textarea><br />
+           Comentários: <textarea ref='comment' className="form-control"></textarea><br />
            <button onClick={this.saveSeries}>Salvar</button>
            </form>
          </section>
