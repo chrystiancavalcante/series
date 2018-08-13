@@ -38,6 +38,13 @@
       "genre": "Drama",
       "comment": "bom",
       "id": 5
+    },
+    {
+      "name": "vamos lá",
+      "status": "watched",
+      "genre": "Ação",
+      "comment": "tá quase",
+      "id": 6
     }
   ],
   "genres": [
