@@ -47,7 +47,7 @@ class Home extends Component{
             }
             {
                 !this.state.isLoading &&
-                <div>
+                <div id='link'>
                 Ver séries do gênero:
                 { this.state.genres.map(this.renderGenresLink)}
                 </div>

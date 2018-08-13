@@ -20,6 +20,13 @@
       "status": "toWatch",
       "genre": "Drama",
       "comments": "Galera fala bem"
+    },
+    {
+      "id": 5,
+      "name": "trapalhoes",
+      "status": "watching",
+      "genre": "Comédia",
+      "comments": "fodaa"
     }
   ],
   "genres": [

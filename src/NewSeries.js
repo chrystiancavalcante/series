@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import api from './Api'
 import { Redirect } from 'react-router-dom'
+
+import api from './Api'
 
 const statuses = {
     'watched': 'Assistido',
@@ -58,14 +59,14 @@ class NewSeries extends Component{
                 .map( key => <option key={key} value={key}>{statuses[key]}</option>)
             }
            </select><br />
-           Genêro:
+           Genero:
            <select ref='genre'>
             { this.state.genres
                 .map( key => <option key={key} value={key}>{key}</option>)
             }
            </select><br />
            Comentários: <textarea ref='comments' className="form-control"></textarea><br />
-           <button onClick={this.saveSeries}>Salvar</button>
+           <button type="button" onClick={this.saveSeries}>Salvar</button>
            </form>
          </section>
     )
