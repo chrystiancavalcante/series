@@ -76,7 +76,7 @@ class EditSeries extends Component{
             }
            </select><br />
            Comentários: <textarea ref='comments' className="form-control"></textarea><br />
-           <button onClick={this.saveSeries}>Salvar</button>
+           <button type="button" onClick={this.saveSeries}>Salvar</button>
            </form>
          </section>
     )

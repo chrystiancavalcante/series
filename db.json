@@ -5,7 +5,7 @@
       "name": "How I met your mother",
       "status": "watching",
       "genre": "Ação",
-      "comments": "Muito bom***aaa"
+      "comments": "Muito bom***aa"
     },
     {
       "id": 3,
@@ -27,6 +27,13 @@
       "status": "watching",
       "genre": "Comédia",
       "comments": "fodaa"
+    },
+    {
+      "name": "House",
+      "status": "watching",
+      "genre": "Ação",
+      "comments": "Boa",
+      "id": 6
     }
   ],
   "genres": [
