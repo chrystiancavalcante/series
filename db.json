@@ -34,6 +34,20 @@
       "status": "watching",
       "genre": "Drama",
       "comments": "Ótima"
+    },
+    {
+      "name": "Lost",
+      "status": "watching",
+      "genre": "Ação",
+      "comments": "Fraco",
+      "id": 7
+    },
+    {
+      "name": "Green",
+      "status": "watching",
+      "genre": "Comédia",
+      "comments": "Ainda não tenho",
+      "id": 8
     }
   ],
   "genres": [

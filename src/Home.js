@@ -30,24 +30,24 @@ class Home extends Component{
    render(){
        return(
            <div>
-                <section id="intro" className="intro-section">
+             <section id="intro" className="intro-section">
                 <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
-                    <h1><img src="images/logo.png" alt="Series" /></h1>
+                    <h1><Link to={'/'}><img src="images/logo.png" alt="Series" /></Link></h1>
                     <p>Nunca mais esqueça uma série que você assistiu ou que alguém lhe indicou.</p>
                     </div>
                 </div>
                 </div>
-            </section>
-            <section>
+             </section>
+            <section id='link'>
             {
                 this.state.isLoading &&
                 <span>Aguarde, carregando...</span>
             }
             {
                 !this.state.isLoading &&
-                <div id='link'>
+                <div>
                 Ver séries do gênero:
                 { this.state.genres.map(this.renderGenresLink)}
                 </div>

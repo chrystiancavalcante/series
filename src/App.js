@@ -21,9 +21,9 @@ class App extends Component {
           <nav className="navbar navbar-default navbar-fixed-top">
             <div className="container">
               <div className="navbar-header page-scroll">
-                <a className="navbar-brand page-scroll" href="#page-top">
-                    <img src="/images/logo.png" alt="Series" height="30" />
-                </a>
+                <Link className="navbar-brand page-scroll" to={'/'}>
+                <img src="/images/logo.png" alt="Series" height="30" />
+                </Link>
               </div>
         
               <div className="collapse navbar-collapse navbar-ex1-collapse">
