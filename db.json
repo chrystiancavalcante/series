@@ -26,7 +26,7 @@
       "name": "trapalhoes",
       "status": "watching",
       "genre": "Comédia",
-      "comments": "fodaa"
+      "comments": "O melhor"
     },
     {
       "id": 6,
@@ -41,13 +41,6 @@
       "genre": "Ação",
       "comments": "Fraco",
       "id": 7
-    },
-    {
-      "name": "Green",
-      "status": "watching",
-      "genre": "Comédia",
-      "comments": "Ainda não tenho",
-      "id": 8
     }
   ],
   "genres": [
