@@ -29,11 +29,11 @@
       "comments": "fodaa"
     },
     {
+      "id": 6,
       "name": "House",
       "status": "watching",
-      "genre": "Ação",
-      "comments": "Boa",
-      "id": 6
+      "genre": "Drama",
+      "comments": "Ótima"
     }
   ],
   "genres": [

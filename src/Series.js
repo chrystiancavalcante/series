@@ -45,7 +45,7 @@ class Series extends Component {
                     <div className="row">
                         <div className="col-xs-12 col-md-6">
                         <p className="lead">{series.genre} / {statuses[series.status]}</p>
-                        </div>
+                        </div><br />
                         <div className="col-xs-12 col-md-6">
                         <Link className="btn btn-success" to={'/series-edit/'+series.id}>Editar</Link>
                         <a className="btn btn-danger" onClick={() => this.deleteSeries(series.id)}>Excluir</a>
@@ -59,7 +59,7 @@ class Series extends Component {
     render(){
         return (
             <section id="intro" className="intro-section">
-                <h1>Series: {this.props.match.params.genre}</h1>
+                <h1>Séries: {this.props.match.params.genre}</h1>
                 { this.state.isLoading && 
                    <p>Carregando, aguarde...</p>
                 }
